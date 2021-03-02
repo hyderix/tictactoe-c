@@ -17,4 +17,5 @@ Then you can just clone this repository and then:
 cd src
 make
 cd ../build
-./tictactoe```
+./tictactoe
+```
