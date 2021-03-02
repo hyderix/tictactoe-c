@@ -1,10 +1,9 @@
-
-
 CC = g++
 CFLAGS = -Wall -g
 TARGET = tictactoe
 
 main: main.o tictacfunc.o
+	mkdir ../build/
 	$(CC) $(CFLAGS) -o ../build/$(TARGET) main.o tictacfunc.o
 	make clean
 main.o: main.cpp tictacfunc.h
