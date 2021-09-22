@@ -44,7 +44,26 @@ int main() {
         validposp2=false;
     } 
     print_bo(board);
-    printf("%c", res);
+    // Legacy result
+    //printf("%c", res);
+
+    if (res == p1) {
+	    printf("Player 1 won!\n");
+    }
+    else if(res == p2) {
+	    printf("Player 2 won!\n");
+
+    }
+    else if(res == 't') {
+	    printf("Tie!\n");
+
+    } 
+    else {
+	    fprintf(stderr, "Something went wrong, this should not happen...");
+	    return 1;
+
+    }
+
 
 
     return 0;
