@@ -5,15 +5,16 @@
 * [Setup] (#setup)
 
 ### Information
-This is just a simple project that I made in order to learn the syntax of C++. I also wanted to learn how to write makefiles and how to link header files.
+This is just a simple project that I made in order to learn the syntax of C++. I also wanted to learn how to write makefiles and how to link header files. I plan to expand this project by learning how to draw stuff to the screen and learn minmax for computer science knowledge.
 
 ### Setup
 To build from source, you will need:
 * Git
-* g++ (The makefile is for g++)
+* A C compiler (change the makefile)
 
 Then you can just clone this repository and then:
-```cd <to the folder where you cloned the repository>
+```bash
+cd <to the folder where you cloned the repository>
 cd src
 make
 cd ../build
