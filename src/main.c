@@ -1,5 +1,5 @@
 //Main game, plays a tic tac toe game with 2 players
-#include <iostream>
+#include <stdio.h>
 #include "tictacfunc.h"
 // The main game code
 int main() {
@@ -20,8 +20,8 @@ int main() {
         
         print_bo(board);
         while (!validposp1) {
-        std::cout<<"Player 1, enter an empty square to play: ";
-        std::cin>>p1pos;
+        printf("Player 1, enter an empty square to play: ");
+	scanf("%d", &p1pos);
         validposp1 = ch_pos(p1pos, p1, board); }
         res = result(board);
         if (res!='0') {
@@ -30,8 +30,8 @@ int main() {
         
         print_bo(board);
         while (!validposp2) {
-        std::cout<<"Player 2, enter an empty square to play: ";
-        std::cin>>p2pos;
+        printf("Player 2, enter an empty square to play: ");
+        scanf("%d", p2pos);
         validposp2 = ch_pos(p2pos, p2, board); }
         if (res!='0') {
             break;
@@ -41,8 +41,8 @@ int main() {
         validposp2=false;
     } 
     print_bo(board);
-    std::cout<<res<<" won!";
+    printf("%c", res);
 
 
     return 0;
-}
+};

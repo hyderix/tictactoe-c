@@ -1,5 +1,5 @@
-CC = g++
-CFLAGS = -Wall -g
+CC = clang
+CFLAGS = -Wall -g -O2
 TARGET = tictactoe
 
 main: main.o tictacfunc.o
