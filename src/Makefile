@@ -2,14 +2,15 @@ CC = clang
 CFLAGS = -Wall -g -O2
 TARGET = tictactoe
 
-main: main.o tictacfunc.o
+all : mainobj tictacfunc
 	mkdir ../build/
 	$(CC) $(CFLAGS) -o ../build/$(TARGET) main.o tictacfunc.o
 	make clean
-main.o: main.cpp tictacfunc.h
-	$(CC) $(CFLAGS) -c main.cpp
+mainobj : main.c
+	$(CC) $(CFLAGS) -c main.c
 
-tictacfunc.o: tictacfunc.h
+tictacfunc:
+	$(CC) $(CFLAGS) -c tictacfunc.c
 
 clean:
 	$(RM) *.o $(TARGET)

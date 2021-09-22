@@ -1,14 +1,17 @@
 // Functions for dealing with the board
 #include "tictacfunc.h"
-#include <iostream>
+#include <stdio.h>
+#include <stdbool.h>
 
 // Prints the two-dimensional array a
 void print_bo(char a[3][3]) {
     for (int i=0;i<3;++i) {
         for (int j=0;j<3;j++) {
-            std::cout<<a[i][j];
+            // std::cout<<a[i][j];
+	    printf("%c", a[i][j]);
         }
-        std::cout<<std::endl;
+        // std::cout<<std::endl;
+	printf("\n");
     }
 }
 

@@ -1,5 +1,9 @@
 //Main game, plays a tic tac toe game with 2 players
+// Standard libraries
 #include <stdio.h>
+#include <stdbool.h>
+
+// Custom libraries
 #include "tictacfunc.h"
 // The main game code
 int main() {
@@ -13,9 +17,8 @@ int main() {
             board[i][j] = '0';
         }
     }
-    bool validposp1, validposp2;
-    validposp1=false;
-    validposp2=false;
+    bool validposp1=false;
+    bool validposp2=false;
     while (1) {
         
         print_bo(board);
@@ -31,7 +34,7 @@ int main() {
         print_bo(board);
         while (!validposp2) {
         printf("Player 2, enter an empty square to play: ");
-        scanf("%d", p2pos);
+        scanf("%d", &p2pos);
         validposp2 = ch_pos(p2pos, p2, board); }
         if (res!='0') {
             break;
