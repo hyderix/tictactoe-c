@@ -5,12 +5,17 @@
 
 // Prints the two-dimensional array a
 void print_bo(char a[3][3]) {
+    printf("-------\n");
     for (int i=0;i<3;++i) {
+	    printf("|");
         for (int j=0;j<3;j++) {
             // std::cout<<a[i][j];
 	    printf("%c", a[i][j]);
+	    printf("|");
         }
         // std::cout<<std::endl;
+	printf("\n");
+        printf("-------");
 	printf("\n");
     }
 }

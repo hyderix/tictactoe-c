@@ -7,8 +7,8 @@
 #include "tictacfunc.h"
 // The main game code
 int main() {
-    const char p1='x';
-    const char p2='o';
+    const char p1='X';
+    const char p2='O';
     int p1pos, p2pos;
     char res='0';
     char board[3][3];
