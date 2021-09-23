@@ -10,6 +10,7 @@ OBJDIR = obj
 
 BINNAME = tictactoe
 DEPS = tictacfunc.h
+LIBS = -lncurses
 # 
 MKDIR_P = mkdir -p
 
@@ -19,7 +20,7 @@ dirs :
 	$(MKDIR_P) $(OBJDIR) $(BUILDDIR)
 
 $(BINNAME) : $(OBJDIR)/main.o $(OBJDIR)/tictacfunc.o
-	$(CC) -o $(BUILDDIR)/$@ $^ $(CFLAGS)
+	$(CC) $(LIBS) -o $(BUILDDIR)/$@ $^ $(CFLAGS)
 
 $(OBJDIR)/%.o : $(SRCDIR)/%.c $(SRCDIR)/$(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
