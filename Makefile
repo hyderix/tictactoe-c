@@ -3,10 +3,7 @@ CFLAGS = # -O2
 OPTIMIZEDFLAGS = -O2
 RM = rm -rf
 
-# SUPRESS_ERROR_MSGS = -Wimplicit-function-declaration
-
 # Dirs for better organization
-
 
 SRCDIR = src
 BUILDDIR = build
@@ -32,7 +29,6 @@ $(OBJDIR)/%.o : $(SRCDIR)/%.c $(SRCDIR)/$(DEPS)
 
 optimized : $(OBJDIR)/main.o $(OBJDIR)/tictacfunc.o
 	$(CC) $(LIBS) -o $(BUILDDIR)/$(BINNAME)-optimized $^ $(OPTIMIZEDFLAGS)
-
 
 
 clean : 

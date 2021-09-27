@@ -1,23 +1,32 @@
 // Functions for dealing with the board
+#include <ncurses.h>
+// #include <curses.h>
 #include "tictacfunc.h"
 #include <stdio.h>
 #include <stdbool.h>
 
+
+// int mvwaddch(WINDOW *win, int y, int x, const chtype ch);
+
 // Prints the two-dimensional array a
-void print_bo(char a[3][3]) {
-    printf("-------\n");
+void print_bo(char a[3][3], WINDOW* win) {
+    wmove(win, 0, 0);
+
+    waddstr(win, "-------\n");
+    // printf("-------\n");
     for (int i=0;i<3;++i) {
-	    printf("|");
+	    addstr("|");
         for (int j=0;j<3;j++) {
             // std::cout<<a[i][j];
-	    printf("%c", a[i][j]);
-	    printf("|");
+	    wprintw(win, "%c", a[i][j]);
+	    waddstr(win, "|");
         }
         // std::cout<<std::endl;
-	printf("\n");
-        printf("-------");
-	printf("\n");
+	waddstr(win, "\n");
+        waddstr(win, "-------");
+	waddstr(win, "\n");
     }
+    wrefresh(win);
 }
 
 // Implements the logic to check who has won
@@ -68,10 +77,31 @@ bool ch_pos(int index, char ch, char board[3][3]) {
 
 // Checks if the position is valid
 bool valid_place(int row, int col, char board[3][3]) {
+    if (row>2) {
+	    return false;
+    }
+    if (col>2) {
+	    return false;
+    }
+ 
     if (board[row][col] == '0') {
         return true;
     }
     else {
         return false;
     }
+}
+
+int prompt(char* text, WINDOW* win) {
+    
+    move(30, 0);
+
+
+    waddstr(win, text);
+
+    wrefresh(win);
+    int ascii_num = wgetch(win);
+    // printf("%d", ascii_num);
+    return ascii_num-48;
+
 }
