@@ -1,11 +1,7 @@
-# Tic tac toe in C++!
-
-### Table of contents
-* [Information] (#information)
-* [Setup] (#setup)
+# Tic tac toe in C!
 
 ### Information
-This is just a simple project that I made in order to learn the syntax of C++. I also wanted to learn how to write makefiles and how to link header files. I plan to expand this project by learning how to draw stuff to the screen and learn minmax for computer science knowledge.
+This is just a simple project that I made in order to learn the syntax of C. I also wanted to learn how to write makefiles and how to link header files. I plan to expand this project by learning how to use ncurses and learn minmax for computer science knowledge.
 
 ### Setup
 To build from source, you will need:

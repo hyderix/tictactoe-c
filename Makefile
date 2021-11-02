@@ -27,9 +27,11 @@ $(OBJDIR)/%.o : $(SRCDIR)/%.c $(SRCDIR)/$(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 
-optimized : $(OBJDIR)/main.o $(OBJDIR)/tictacfunc.o
-	$(CC) $(LIBS) -o $(BUILDDIR)/$(BINNAME)-optimized $^ $(OPTIMIZEDFLAGS)
+#optimized : $(OBJDIR)/main.o $(OBJDIR)/tictacfunc.o
+#	make dirs
+#	$(CC) $(LIBS) -o $(BUILDDIR)/$(BINNAME)-optimized $^ $(OPTIMIZEDFLAGS)
 
 
 clean : 
 	$(RM) *.o $(BUILDDIR) $(OBJDIR)
+
