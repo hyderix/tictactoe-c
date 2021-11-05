@@ -7,6 +7,7 @@ This is just a simple project that I made in order to learn the syntax of C. I a
 To build from source, you will need:
 * Git
 * A C compiler (change the makefile)
+* `make`
 
 Then you can just clone this repository and then:
 ```bash
